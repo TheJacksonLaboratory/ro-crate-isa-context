@@ -1,0 +1,24 @@
+{
+    "@context": [
+        "https://w3id.org/ro/crate/1.1/context"
+    ],
+    "@graph": [
+        {
+            "@id": "https://bioconnect-ui-sqa.azurewebsites.net/search/metadata-search-browse/detail-view/investigation/269",
+            "@type": "Investigation",
+            "name": "JAXIN00000B",
+            "title": "Transcriptome profiling of non-islet metabolic tissues in DO founder mice fed high-fat, high-sugar diet. "
+        },
+        {
+            "@id": "https://bioconnect-ui-sqa.azurewebsites.net/search/metadata-search-browse/detail-view/study/444",
+            "@type": "Study",
+            "investigation": {
+                "@id": "https://bioconnect-ui-sqa.azurewebsites.net/search/metadata-search-browse/detail-view/investigation/269"
+            },
+            "name": "JAXST00000J",
+            "publicReleaseDate": "2024-01-21T13:53:08+00:00",
+            "submissionDate": "2024-03-26T14:54:09+00:00",
+            "title": "RNA-seq expression analysis of liver, adipose, skeletal muscle, heart, and pancreatic islets from DO founder strain mice fed high-fat, high-sugar diet."
+        }
+    ]
+}
