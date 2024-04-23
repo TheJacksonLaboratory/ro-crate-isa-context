@@ -1,6 +1,7 @@
 {
     "@context": [
-        "https://w3id.org/ro/crate/1.1/context"
+        "https://w3id.org/ro/crate/1.1/context",
+        "https://dev.azure.com/jaxcs/JaxPublic/_git/ro-crate-isa-context?path=/isa/isa_context_1_0.json"
     ],
     "@graph": [
         {
