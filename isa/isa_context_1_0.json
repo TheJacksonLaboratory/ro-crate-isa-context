@@ -1,0 +1,97 @@
+{
+     "@context": {	 
+		"Assay": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_assay_isaterms_context.jsonld",
+		"Factor": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_factor_isaterms_context.jsonld",
+		"FactorValue": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_factor_value_isaterms_context.jsonld",
+		"Investigation": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_investigation_isaterms_context.jsonld",
+		"MaterialAttributeValue": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_material_attribute_value_isaterms_context.jsonld",
+		"OntologyAnnotation": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_ontology_annotation_isaterms_context.jsonld",
+		"OntologySourceReference": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_ontology_source_reference_isaterms_context.jsonld",
+		"Person": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_person_isaterms_context.jsonld",
+		"Process": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_process_isaterms_context.jsonld",
+		"ProcessParameterValue": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_process_parameter_value_isaterms_context.jsonld",
+		"Protocol": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_protocol_isaterms_context.jsonld",
+		"ProtocolParameter": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_protocol_parameter_isaterms_context.jsonld",
+		"Publication": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_publication_isaterms_context.jsonld",
+		"Sample": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_sample_isaterms_context.jsonld",
+		"Source": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_source_isaterms_context.jsonld",
+		"Study": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_study_isaterms_context.jsonld",
+		
+		"assay": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_assay_isaterms_context.jsonld",
+		"factor": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_factor_isaterms_context.jsonld",
+		"factorvalue": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_factor_value_isaterms_context.jsonld",
+		"investigation": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_investigation_isaterms_context.jsonld",
+		"materialattributevalue": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_material_attribute_value_isaterms_context.jsonld",
+		"ontologyannotation": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_ontology_annotation_isaterms_context.jsonld",
+		"ontologysourcereference": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_ontology_source_reference_isaterms_context.jsonld",
+		"person": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_person_isaterms_context.jsonld",
+		"process": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_process_isaterms_context.jsonld",
+		"processparametervalue": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_process_parameter_value_isaterms_context.jsonld",
+		"protocol": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_protocol_isaterms_context.jsonld",
+		"protocolparameter": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_protocol_parameter_isaterms_context.jsonld",
+		"publication": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_publication_isaterms_context.jsonld",
+		"sample": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_sample_isaterms_context.jsonld",
+		"source": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_source_isaterms_context.jsonld",
+		"study": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_study_isaterms_context.jsonld",
+
+		"studies": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_study_isaterms_context.jsonld",
+		"ontology_source_references": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_ontology_source_reference_isaterms_context.jsonld",
+		"ontologySourceReferences": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_ontology_source_reference_isaterms_context.jsonld",
+
+		"comments": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_comment_isaterms_context.jsonld",
+		"characteristicCategories": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_ontology_annotation_isaterms_context.jsonld",
+		"contacts": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_person_isaterms_context.jsonld",
+		"designDescriptors": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_ontology_annotation_isaterms_context.jsonld",
+		"factors": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_ontology_annotation_isaterms_context.jsonld",
+		"protocols": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_protocol_isaterms_context.jsonld",
+		"publications": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_publication_isaterms_context.jsonld",
+		"sources": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_source_isaterms_context.jsonld",
+		"unitCategories": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_ontology_annotation_isaterms_context.jsonld",
+
+		"dataFiles": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_data_isaterms_context.jsonld",
+		"samples": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_sample_isaterms_context.jsonld",
+		"processSequence": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_process_isaterms_context.jsonld",
+		"measurementType": {
+			"@id": "https://purl.org/isaterms#has_measurement",
+			"@type": "https://purl.org/isaterms#measurement"
+		},
+		"technologyType": {
+		"@id": "https://purl.org/isaterms#has_technology",
+		"@type": "https://purl.org/isaterms#technology"
+		},
+
+		"characteristics": "https://raw.githubusercontent.com/ISA-tools/isa-api/master/isatools/resources/json-context/isaterms/isa_material_attribute_value_isaterms_context.jsonld",
+
+
+		"isa": "http://schema.org/",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"identifier": {
+			"@id": "isa:identified_by",
+			"@type": "@id"
+		},		
+		"submissionDate": {
+			"@id": "isa:performed_on",
+			"@type": "isa:submission_date"
+		},
+		"publicReleaseDate": {
+			"@id": "isa:released_on",
+			"@type": "isa:publication_date"
+		},
+		"technologyPlatform": {
+			"@id": "isa:is_described_by",
+			"@type": "isa:technology_platform"
+		},			
+		"annotationValue": {
+			"@id": "isa:has_part",
+			"@type": "xsd:string"
+		},
+		"termAccession": {
+			"@id": "isa:identified_by",
+			"@type": "isa:identifier"
+		},
+		"value": {
+			"@id": "isa:has_part",
+			"@type": "xsd:string"
+		}
+     }
+}
