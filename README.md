@@ -1,6 +1,6 @@
 # RO-Crate ISA Context
 
-This is a public repository for ISA context files. The urls for these files can be added into the
+This is a public repository for ISA context files to expand the . The urls for these files can be added into the
 "@context" section of "ro-crate-metadata.json", without any changes of the data in "@graph" section. 
 The result is that more ISA data in "@graph" section will be parsable by the most RDF tools. User can extract 
 more information with the same data in "ro-crate-metadata.json"
@@ -94,7 +94,7 @@ ISA context so more data will be understandable by the parser.
 There are three types of context to make the ISA data more parsable:
 - Use uppercase ISA model objects to match the entry has the "@type" defined, such as "@type": "Study"
 - Use lowercase ISA model objects to match the fields which use the lower case, such as the "investigation":"uri" in the study object
-- Manually define mapping for the fields which are not ISA object type such as "submissionDate", "annotationValue", using the same 
+- expanded term definition Manually define mapping for the fields which are not ISA object type such as "submissionDate", "annotationValue", using the same 
 as in ISA schema definition
 
 ## Experiment
