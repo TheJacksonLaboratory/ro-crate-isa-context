@@ -1,21 +1,33 @@
 # RO-Crate ISA Context
 
-This is a public repository for ISA context files to expand the . The urls for these files can be added into the
-"@context" section of "ro-crate-metadata.json", without any changes of the data in "@graph" section. 
-The result is that more ISA data in "@graph" section will be parsable by the most RDF tools. User can extract 
-more information with the same data in "ro-crate-metadata.json"
+This is a public repository for context files for the ISA data JSON-LD file such as "ro-crate-metadata.json". 
+The public urls for these files can be added into the "@context" section of JSON-LD file to expand the terms
+for the ISA data. Without any changes of the data in "@graph" section, the result is that more ISA data will be linked and more triples can be extracted by the most RDF tools. 
 
 ## Background Information
 The ro-crate is a great way to package all the data in a single deliverable json file. However, when ISA data
-is packaged into the "ro-crate-metadata.json", some schema information are not included in the json file, and 
-RDF parsing tools can not figure out data type and end up throw away these linkable data.
+is packaged into the "ro-crate-metadata.json", schema information is missing and the context information for 
+these ISA data terms do not exist. RDF parsing tools can not figure out data type and end up throw away these linkable data.
 
-## Simple Example
-to illustrate the more data will be extracted with our ISA context file, we can use a simple "ro-crate-metadata.json" JSON-LD 
-file to see the difference, plug it into the [JSON-LD Playground](https://json-ld.org/playground/) to see how many triples we
-can get.
+Here is an example from [W3C JSON-LD Specification](https://www.w3.org/TR/json-ld11/)
+```
+{
+  "@context": {
+    "name": "http://schema.org/name"
+  },
+  "name": "Manu Sporny",
+  "status": "trollin'"
+}
+The "name" field has context definition, and is parsable. However, "status" does not expand to an IRI. It
+is not Linked Data and thus ignored when processed.
+```
 
-Here is a example JSON-LD file. To make it simple, we deleted some ro-crate nodes.
+## Simple illustrattion
+To illustrate, we can use a simple "ro-crate-metadata.json" file, with and without our ISA context, 
+plug it into the [JSON-LD Playground](https://json-ld.org/playground/) to see the differences of number of triples
+extracted.
+
+Here is a example ISA JSON-LD file without ISA context. To make it simple, we deleted some ro-crate nodes.
 ```
 {
     "@context": [
@@ -43,16 +55,15 @@ Here is a example JSON-LD file. To make it simple, we deleted some ro-crate node
 }
 ```
 
-If we paste the file content into the [JSON-LD Playground](https://json-ld.org/playground/), we can see there are 4 triples in the graph, 
-two for investigation and two for study.
+Paste the file content into the [JSON-LD Playground](https://json-ld.org/playground/), we can see there are 4 triples in the graph, two for investigation and two for study.
 ![No ISA Context](img/no_isa_context.png "No ISA Context")
 
 
-Now we just add an URL to point our ISA context schema file in this repository:
+Now add our ISA context URL:
 ```
 "https://raw.githubusercontent.com/TheJacksonLaboratory/ro-crate-isa-context/init/isa/isa_context_1_0.json"
 ```
-Here is the entire file:
+to the "@context" section and everything else is the same as the previous one. Here is the entire file:
 
 ```
 {
@@ -82,20 +93,19 @@ Here is the entire file:
 }
 ```
 
-we pasted into [JSON-LD Playground](https://json-ld.org/playground/) again, and now can see there are 9 triples
+Paste the file content into [JSON-LD Playground](https://json-ld.org/playground/) again, and now can see there are 9 triples
 ![ISA Context](img/isa_context.png "ISA Context")
 
 ## How the ISA context increases the linkable data
-When a parser extracts the triples from JSON-LD, it needs to map terms to the IRIs, which the context. 
-Contexts can either be directly embedded into the document (an embedded context) or be referenced using a URL.
-When I add the ISA context URL into the "@context" section of  "ro-crate-metadata.json" JSON-LD file, We expanded
-ISA context so more data will be understandable by the parser. 
+When a parser extracts the triples from JSON-LD, it needs to map terms to its definition, which is the context. 
+Contexts can either be directly embedded into the document (an embedded context) or be a remote URL.
+When I add the ISA context URL into the "@context" section of  "ro-crate-metadata.json" JSON-LD file, We added the 
+schema information for these ISA data so more data will be understandable by the parser. 
 
-There are three types of context to make the ISA data more parsable:
+Our ISA context helps ISA data parsing in three ways:
 - Use uppercase ISA model objects to match the entry has the "@type" defined, such as "@type": "Study"
 - Use lowercase ISA model objects to match the fields which use the lower case, such as the "investigation":"uri" in the study object
-- expanded term definition Manually define mapping for the fields which are not ISA object type such as "submissionDate", "annotationValue", using the same 
-as in ISA schema definition
+- Define context terms based ISA schema definition for the properties in ISA data object such as "submissionDate", "annotationValue"
 
 ## Experiment
 To see how much more information we can get, we take 240 "ro-crate-metadata.json" files and use 
@@ -354,8 +364,7 @@ mean we can get double amount of triples with our ISA context
 ## How to use it
 The only thing need to do is just to insert the ISA context URL into the "@context" section, the same level as "https://w3id.org/ro/crate/1.1/context".
 
-For [python rocrate ](https://pypi.org/project/rocrate/) to generate the ro-crate json, just need to add the extra terms in the
-metadata like this
+For [python rocrate ](https://pypi.org/project/rocrate/) to generate the ro-crate json, just need to add the extra terms in the metadata like this
 ```
 crate.metadata.extra_terms = "https://raw.githubusercontent.com/TheJacksonLaboratory/ro-crate-isa-context/init/isa/isa_context_1_0.json"
 ```
