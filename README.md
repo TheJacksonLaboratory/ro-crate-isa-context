@@ -1,6 +1,6 @@
 # RO-Crate ISA Context
 
-This is a public repository for context files for the ISA data JSON-LD file such as "ro-crate-metadata.json". 
+This is a public repository for context files for the [ISA](https://github.com/ISA-tools/isa-api/tree/master/isatools/resources/schemas/isa_model_version_1_0_schemas/core) data JSON-LD file such as "ro-crate-metadata.json". 
 The public urls for these files can be added into the "@context" section of JSON-LD file to expand the terms
 for the ISA data. Without any changes of the data in "@graph" section, the result is that more ISA data will be linked and more triples can be extracted by the most RDF tools. 
 
