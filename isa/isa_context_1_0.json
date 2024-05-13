@@ -1,9 +1,9 @@
 {
-  "@id": "https://dev.azure.com/jaxcs/JaxPublic/_git/ro-crate-isa-context?path=/isa/isa_context_1_0.json",
+  "@id": "https://raw.githubusercontent.com/TheJacksonLaboratory/ro-crate-isa-context/main/isa/isa_context_1_0.json",
   "name": ["ISA JSON-LD Context"],
   "version": "1.0.0",
   "url": {
-    "@id": "https://dev.azure.com/jaxcs/JaxPublic/_git/ro-crate-isa-context?path=/isa/isa_context_1_0.json"
+    "@id": "https://raw.githubusercontent.com/TheJacksonLaboratory/ro-crate-isa-context/main/isa/isa_context_1_0.json"
   },
   "schemaVersion": {
     "@id": "http://schema.org/version/10.0/"
