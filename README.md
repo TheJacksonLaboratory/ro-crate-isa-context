@@ -61,7 +61,7 @@ Paste the file content into the [JSON-LD Playground](https://json-ld.org/playgro
 
 Now add our ISA context URL:
 ```
-"https://raw.githubusercontent.com/TheJacksonLaboratory/ro-crate-isa-context/isa/isa_context_1_0.json"
+https://raw.githubusercontent.com/TheJacksonLaboratory/ro-crate-isa-context/main/isa/isa_context_1_0.json
 ```
 to the "@context" section and everything else is the same as the previous one. Here is the entire file:
 
@@ -69,7 +69,7 @@ to the "@context" section and everything else is the same as the previous one. H
 {
     "@context": [
         "https://w3id.org/ro/crate/1.1/context",
-        "https://raw.githubusercontent.com/TheJacksonLaboratory/ro-crate-isa-context/isa/isa_context_1_0.json"
+        "https://raw.githubusercontent.com/TheJacksonLaboratory/ro-crate-isa-context/main/isa/isa_context_1_0.json"
     ],
     "@graph": [
         {
@@ -137,7 +137,7 @@ The only thing need to do is just to insert the ISA context URL into the "@conte
 
 For [python rocrate ](https://pypi.org/project/rocrate/) to generate the ro-crate json, just need to add the extra terms in the metadata like this
 ```
-crate.metadata.extra_terms = "https://raw.githubusercontent.com/TheJacksonLaboratory/ro-crate-isa-context/isa/isa_context_1_0.json"
+crate.metadata.extra_terms = "https://raw.githubusercontent.com/TheJacksonLaboratory/ro-crate-isa-context/main/isa/isa_context_1_0.json"
 ```
 the rocrate lib will add the context in the generated json file
 
