@@ -108,6 +108,18 @@
     "value": {
       "@id": "isa:has_part",
       "@type": "xsd:string"
+    },
+    "authorList": {
+      "@id": "isa:has_part",
+      "@type": "xsd:string"
+    },
+    "doi": {
+      "@id": "isa:has_part",
+      "@type": "xsd:string"
+    },
+    "pubMedID": {
+      "@id": "isa:has_part",
+      "@type": "xsd:string"
     }
   }
 }
