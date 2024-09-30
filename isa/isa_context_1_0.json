@@ -110,15 +110,15 @@
       "@type": "xsd:string"
     },
     "authorList": {
-      "@id": "isa:has_part",
+      "@id": "isa:author",
       "@type": "xsd:string"
     },
     "doi": {
-      "@id": "isa:has_part",
+      "@id": "isa:doi",
       "@type": "xsd:string"
     },
     "pubMedID": {
-      "@id": "isa:has_part",
+      "@id": "isa:pubmed_identifier",
       "@type": "xsd:string"
     }
   }
