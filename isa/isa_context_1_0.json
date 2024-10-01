@@ -110,7 +110,7 @@
       "@type": "xsd:string"
     },
     "authorList": {
-      "@id": "isa:author",
+      "@id": "isa:authorList",
       "@type": "xsd:string"
     },
     "doi": {
@@ -118,7 +118,7 @@
       "@type": "xsd:string"
     },
     "pubMedID": {
-      "@id": "isa:pubmed_identifier",
+      "@id": "isa:pubMedID",
       "@type": "xsd:string"
     }
   }
